@@ -4,7 +4,7 @@
 /***************** VARIABLES *******************/
 :root {
 	/* Colors */
-	--black-color-00: #000;
+	--black-color-00: #420144;
 	--primary-color: #770493;
 	--secondary-color: #ed0b65;
 	--white-color-00: #fff;
@@ -127,6 +127,7 @@ ul {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow-x: hidden;
 }
 
 .content {
@@ -212,7 +213,7 @@ ul {
 	font-size: var(--lg-fs);
 	font-weight: var(--bold-fw);
 	text-align: center;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	color: var(--black-color-00);
 }
 
@@ -249,3 +250,46 @@ ul {
 /************** End of REGISTRATION ***************/
 
 /***************** Responsiveness *******************/
+@media screen and (max-width: 1050px) {
+	.content {
+		grid-template-columns: 40% 55%;
+		column-gap: 5%;
+	}
+}
+
+@media screen and (max-width: 940px) {
+	.content {
+		grid-template-columns: 100%;
+	}
+
+	.text-area {
+		display: none;
+	}
+
+	.form-area {
+		width: 100vw;
+	}
+
+	#form {
+		min-width: unset;
+		width: 90%;
+		max-width: 450px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.btn {
+		width: 100%;
+	}
+
+	#form {
+		padding-left: 6.5rem;
+	}
+}
+
+@media screen and (max-width: 390px) {
+	#form {
+		padding: 1rem 1.25rem;
+		border-radius: 1rem;
+	}
+}
