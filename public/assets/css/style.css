@@ -20,7 +20,8 @@
 	/* Font Size */
 	--base-fs: 1rem;
 	--lg-fs: 1.25rem;
-	--xl-fs: 1.5rem;
+	--xxl-fs: 2.75rem;
+	--xxxl-fs: 4.75rem;
 
 	/* Width */
 	--container-mw: 1280px;
@@ -59,12 +60,6 @@ a {
 	text-decoration: none;
 }
 
-a,
-button {
-	font-weight: var(--medium-fw);
-	color: var(--white-color-00);
-}
-
 select,
 button {
 	cursor: pointer;
@@ -90,6 +85,33 @@ ul {
 	margin: 0 auto;
 }
 
+.title,
+.subtitle {
+	text-align: center;
+}
+
+.title {
+	font-size: var(--xxl-fs);
+	text-transform: uppercase;
+	color: var(--black-color-00);
+}
+
+.subtitle {
+	font-size: var(--lg-fs);
+	text-transform: capitalize;
+}
+
+.btn {
+	font-size: var(--base-fs);
+	text-transform: capitalize;
+	font-weight: var(--medium-fw);
+	color: var(--black-color-00);
+	width: fit-content;
+	padding: 0.55rem 1.85rem;
+	border-radius: 1.85rem;
+	font-family: var(--text-ff);
+	transition: background-color 0.35s ease-in-out;
+}
 /***************** REGISTRATION *******************/
 #registration {
 	background-image: linear-gradient(
@@ -98,10 +120,61 @@ ul {
 		var(--secondary-color)
 	);
 	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
+.content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 2.75rem;
+	align-items: center;
+}
 /***************** TEXT AREA *******************/
-/* TODO: Create TEXT AREA style */
+.text-area {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	align-items: center;
+}
+
+.icon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	top: 0;
+	position: relative;
+	animation: 1s ease-in-out 0s infinite normal forwards icon__move;
+	margin-bottom: 2rem;
+}
+
+.icon i {
+	font-size: var(--xxxl-fs);
+}
+
+.icon i:nth-child(1) {
+	margin-bottom: -3.55rem;
+}
+
+.text-btn {
+	background-color: var(--white-color-00);
+	border: 2px solid var(--white-color-00);
+}
+
+.text-btn:hover {
+	background-color: transparent;
+	color: var(--white-color-00);
+}
+
+@keyframes icon__move {
+	to {
+		opacity: 1;
+		top: 2.75rem;
+	}
+}
 /************** End of TEXT AREA ***************/
 
 /***************** FORM AREA *******************/
