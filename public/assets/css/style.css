@@ -17,6 +17,11 @@
 	--medium-fw: 500;
 	--bold-fw: 700;
 
+	/* Font Size */
+	--base-fs: 1rem;
+	--lg-fs: 1.25rem;
+	--xl-fs: 1.5rem;
+
 	/* Width */
 	--container-mw: 1280px;
 	--container-pi: 0.85rem;
@@ -35,11 +40,29 @@ body {
 }
 
 body {
+	color: var(--white-color-00);
+	font-weight: var(--normal-fw);
 	font-family: var(--text-ff);
+	font-size: var(--base-fs);
+	overflow-x: hidden;
+}
+
+h1 {
+	font-weight: var(--bold-fw);
+}
+
+h2 {
+	font-weight: var(--medium-fw);
 }
 
 a {
 	text-decoration: none;
+}
+
+a,
+button {
+	font-weight: var(--medium-fw);
+	color: var(--white-color-00);
 }
 
 select,
@@ -53,6 +76,7 @@ textarea,
 select {
 	border: none;
 	overflow: none;
+	background-color: transparent;
 }
 
 ul {
@@ -67,7 +91,14 @@ ul {
 }
 
 /***************** REGISTRATION *******************/
-/* TODO: Create REGISTRATION style */
+#registration {
+	background-image: linear-gradient(
+		to right,
+		var(--primary-color),
+		var(--secondary-color)
+	);
+	min-height: 100vh;
+}
 
 /***************** TEXT AREA *******************/
 /* TODO: Create TEXT AREA style */
