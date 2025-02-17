@@ -58,3 +58,25 @@ select {
 ul {
 	list-style: none;
 }
+
+/***************** Reusable *******************/
+.container {
+	max-width: var(--container-mw);
+	padding-inline: var(--container-pi);
+	margin: 0 auto;
+}
+
+/***************** REGISTRATION *******************/
+/* TODO: Create REGISTRATION style */
+
+/***************** TEXT AREA *******************/
+/* TODO: Create TEXT AREA style */
+/************** End of TEXT AREA ***************/
+
+/***************** FORM AREA *******************/
+/* TODO: Create FORM AREA style */
+/************** End of FORM AREA ***************/
+
+/************** End of REGISTRATION ***************/
+
+/***************** Responsiveness *******************/
