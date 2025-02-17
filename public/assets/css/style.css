@@ -26,6 +26,10 @@
 	/* Width */
 	--container-mw: 1280px;
 	--container-pi: 0.85rem;
+
+	/* Box Shadow */
+	--primary-bs: 1px 1px 15px 25px rgba(119, 4, 147, 0.08);
+	--secondary-bs: 1px 1px 25px 15px rgba(237, 11, 101, 0.06);
 }
 
 /***************** General *******************/
@@ -70,7 +74,7 @@ input,
 textarea,
 select {
 	border: none;
-	overflow: none;
+	outline: none;
 	background-color: transparent;
 }
 
@@ -105,12 +109,12 @@ ul {
 	font-size: var(--base-fs);
 	text-transform: capitalize;
 	font-weight: var(--medium-fw);
-	color: var(--black-color-00);
 	width: fit-content;
 	padding: 0.55rem 1.85rem;
 	border-radius: 1.85rem;
 	font-family: var(--text-ff);
 	transition: background-color 0.35s ease-in-out;
+	border: 2px solid transparent;
 }
 /***************** REGISTRATION *******************/
 #registration {
@@ -161,7 +165,9 @@ ul {
 
 .text-btn {
 	background-color: var(--white-color-00);
-	border: 2px solid var(--white-color-00);
+	border-color: var(--white-color-00);
+	color: var(--black-color-00);
+	box-shadow: var(--primary-bs);
 }
 
 .text-btn:hover {
@@ -178,7 +184,66 @@ ul {
 /************** End of TEXT AREA ***************/
 
 /***************** FORM AREA *******************/
-/* TODO: Create FORM AREA style */
+.form-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#form,
+.input-field {
+	display: flex;
+	flex-direction: column;
+}
+
+#form {
+	background-color: rgba(255, 255, 255, 0.85);
+	border-top-left-radius: 40%;
+	border-bottom-left-radius: 48%;
+	border-top-right-radius: 1.85rem;
+	border-bottom-right-radius: 3.85rem;
+	padding: 2.5rem 2.5rem 2.5rem 4.5rem;
+	min-width: 90%;
+	gap: 1.25rem;
+	box-shadow: var(--primary-bs);
+}
+
+.form-title {
+	font-size: var(--lg-fs);
+	font-weight: var(--bold-fw);
+	text-align: center;
+	text-transform: capitalize;
+	color: var(--black-color-00);
+}
+
+.input-field {
+	gap: 0.85rem;
+}
+
+.input-field input {
+	border: 2px solid rgba(0, 0, 0, 0.15);
+	border-radius: 0.85rem;
+	padding: 0.55rem 1.25rem;
+}
+
+.input-field input:focus {
+	border-color: rgba(237, 11, 101, 0.6);
+	box-shadow: var(--secondary-bs);
+	background-color: rgba(255, 255, 255, 0.18);
+}
+
+.form-btn {
+	align-self: flex-end;
+	box-shadow: var(--secondary-bs);
+	background-color: var(--secondary-color);
+	color: var(--white-color-00);
+	border-color: var(--secondary-color);
+}
+
+.form-btn:hover {
+	background-color: transparent;
+	color: var(--secondary-color);
+}
 /************** End of FORM AREA ***************/
 
 /************** End of REGISTRATION ***************/
