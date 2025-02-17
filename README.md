@@ -1,4 +1,4 @@
-# Register Page Design
+# Registration Page Design
 
 This repository contains the layout of a website **registration page**. The design is created using HTML, CSS, and JavaScript.
 
