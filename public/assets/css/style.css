@@ -1,0 +1,60 @@
+/***************** Imports *******************/
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
+
+/***************** VARIABLES *******************/
+:root {
+	/* Colors */
+	--black-color-00: #000;
+	--primary-color: #770493;
+	--secondary-color: #ed0b65;
+	--white-color-00: #fff;
+
+	/* Font Family */
+	--text-ff: 'Atkinson Hyperlegible Next', serif;
+
+	/* Font Weight */
+	--normal-fw: 400;
+	--medium-fw: 500;
+	--bold-fw: 700;
+
+	/* Width */
+	--container-mw: 1280px;
+	--container-pi: 0.85rem;
+}
+
+/***************** General *******************/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--text-ff);
+}
+
+a {
+	text-decoration: none;
+}
+
+select,
+button {
+	cursor: pointer;
+}
+
+button,
+input,
+textarea,
+select {
+	border: none;
+	overflow: none;
+}
+
+ul {
+	list-style: none;
+}
